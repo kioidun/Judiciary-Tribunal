@@ -1,0 +1,208 @@
+/* ===== Find Out More (safe with sticky headers & no overlap) ===== */
+
+/* If a sticky navbar exists, set this once near your root/global css */
+:root {
+  --sticky-offset: 72px; /* adjust to your navbar height */
+}
+
+/* Add the helper class only when you want scroll anchoring
+   <section class="findout-more_container with-sticky-offset"> … */
+.findout-more_container.with-sticky-offset {
+  scroll-margin-top: var(--sticky-offset);
+  margin-top: calc(var(--sticky-offset) + 8px);
+}
+
+/* Base layout (desktop-first) */
+.findout-more_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 60vh;                /* desktop hero feel */
+  padding: 20px 0 100px 0;         /* roomy on desktop */
+  position: relative;
+  gap: 24px;
+  overflow: hidden;                /* guard against hover scale bleed */
+}
+
+/* Columns */
+.findout-more_container_logo,
+.findout-more_container_faq,
+.findout-more_container_charter {
+  flex: 1 1 0;
+  height: auto;
+  min-width: 0;
+}
+
+/* Left column padding only on desktop */
+.findout-more_container_logo {
+  padding-left: 100px;
+}
+
+/* Image: transform scaling (no reflow) */
+.findout-more_container_logo img {
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  transform-origin: center center;
+  will-change: transform;
+  display: block;
+  object-fit: contain;
+}
+
+.findout-more_container_logo img:hover {
+  transform: scale(1.12);
+  cursor: pointer;
+}
+
+/* Links & text */
+.content-link {
+  padding: 20px 0 0 20px;
+}
+
+.content-link .link-teams-color {
+  color: #ceba39;
+  font-size: 32px;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.content-link .link-teams-color:hover {
+  color: #0baa6d;
+}
+
+.findout-more_container_charter p,
+.findout-more_container_faq p {
+  padding: 0 40px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #222;
+  word-wrap: break-word;
+}
+
+/* -------------- Responsive -------------- */
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .findout-more_container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* shrink desktop spacing */
+    min-height: 48vh;              /* ↓ from 60vh */
+    padding: 16px 0 40px 0;        /* ↓ top/bottom padding */
+    text-align: center;
+    gap: 20px;
+  }
+
+  /* If you used the with-sticky-offset helper, remove that extra margin on small screens */
+  .findout-more_container.with-sticky-offset {
+    margin-top: 0;                 /* prevent big gap */
+  }
+
+  .findout-more_container_logo {
+    padding-left: 0;
+  }
+
+  .findout-more_container_logo img {
+    width: 220px;
+    height: 220px;
+    padding: 12px;
+  }
+
+  .findout-more_container_logo img:hover {
+    transform: scale(1.08);
+  }
+
+  .findout-more_container_charter,
+  .findout-more_container_faq {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .findout-more_container_charter p,
+  .findout-more_container_faq p {
+    padding: 0 16px;
+    font-size: 16px;
+  }
+
+  .content-link .link-teams-color {
+    font-size: 24px;
+  }
+}
+
+/* Mobile (≤ 770px) */
+@media (max-width: 770px) {
+  .findout-more_container {
+    /* collapse hero feel further on phones */
+    min-height: auto;              /* let content define height */
+    padding: 10px 0 20px 0;        /* tighter vertical spacing */
+    gap: 16px;
+  }
+
+  .findout-more_container_logo img {
+    width: 170px;
+    height: 170px;
+    padding: 8px;
+  }
+
+  .findout-more_container_logo img:hover {
+    transform: scale(1.06);
+  }
+
+  .findout-more_container_charter,
+  .findout-more_container_faq {
+    max-width: 92%;
+  }
+
+  .findout-more_container_charter p,
+  .findout-more_container_faq p {
+    padding: 0 10px;
+    font-size: 15px;
+  }
+
+  .content-link {
+    padding: 12px 0 0 0;           /* remove left pad on mobile */
+  }
+
+  .content-link .link-teams-color {
+    font-size: 18px;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .findout-more_container {
+    padding: 8px 0 16px 0;         /* smallest vertical spacing */
+    gap: 12px;
+  }
+
+  .findout-more_container_logo img {
+    width: 130px;
+    height: 130px;
+    padding: 6px;
+  }
+
+  .findout-more_container_logo img:hover {
+    transform: scale(1.05);
+  }
+
+  .findout-more_container_charter,
+  .findout-more_container_faq {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
+  .findout-more_container_charter p,
+  .findout-more_container_faq p {
+    padding: 0 6px;
+    font-size: 13.5px;
+  }
+
+  .content-link .link-teams-color {
+    font-size: 15px;
+  }
+}

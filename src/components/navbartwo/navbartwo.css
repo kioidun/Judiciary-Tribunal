@@ -1,0 +1,194 @@
+/* Navbar Wrapper */
+.nav {
+  height: auto;
+  background-color: #928830;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+/* Navbar Inner Container */
+.navbar {
+  height: 10vh;
+  background-color: #928830;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  position: relative;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+  width: auto; /* keep natural proportions */
+  object-fit: contain; /* ensures it never gets stretched */
+  max-height: 60px; /* prevents oversized scaling */
+}
+
+/* Navigation Items */
+.nav-items {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 0;
+}
+
+/* Individual Nav Item */
+.nav-item {
+  position: relative;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto", sans-serif;  /* Explicit font family */
+  font-size: 20px; /* Explicit font size */
+  padding: 6px 16px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.nav-item a:hover {
+  color: black;
+}
+
+.nav-causlist {
+  font-family: "Roboto", sans-serif; /* Ensure font consistency */
+  font-size: 20px;
+  background-color: white;
+  color: black;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+
+.nav-causlist:hover {
+  background-color: black;
+}
+
+.nav-button-cause {
+  color: #928830;
+}
+
+.nav-button-cause:hover {
+  color: white;
+}
+
+/* Toggle Button */
+.nav_toggle-btn {
+  display: none;
+  background: transparent;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Dropdown Position Fix */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #928830;
+  padding: 0.5rem 0;
+  z-index: 9999;
+  display: none;
+}
+
+.dropdown.show {
+  display: block;
+}
+
+.btn_causelist{
+  border: 0px solid black;
+ background-color: #ceba39;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: black;
+  border-radius: 50px;
+}
+ .btn_causelist:hover {
+   background-color: #20a66f;
+  color: white;
+}
+
+/* Mobile Styles */
+@media (max-width: 1200px) {
+ .navbar{
+    height:15vh
+  }
+}
+
+@media (max-width: 1024px) {
+ 
+  .nav_toggle-btn {
+    display: inline-block;
+  }
+
+  .nav-items {
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    flex-direction: column;
+    background-color: #928830;
+    width: 100vw;
+    padding: 1rem 0;
+    display: none;
+  }
+
+  .nav-items.show_Nav {
+    display: flex;
+  }
+
+  .nav-items.hide_Nav {
+    display: none;
+  }
+
+  .nav-item {
+    height: auto;
+    text-align: left;
+    padding: 0.5rem 2rem;
+    width: 100%;
+  }
+
+  .nav-item a {
+    width: 100%;
+    display: block;
+    font-size: 18px;  /* Font size for mobile */
+  }
+
+  .nav-causlist {
+    margin: 1rem 2rem;
+    width: fit-content;
+  }
+  .logo img {
+    height: 45px;
+    max-height: 50px;
+    padding-right: 20px;
+  }
+   .nav_toggle-btn{
+    padding-left: 50px;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .nav-item a {
+    font-size: 16px;  /* Smaller font size for small devices */
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-causlist {
+    font-size: 14px;
+  }
+  .logo img {
+    height: 40px;
+    max-height: 45px;
+  }
+  .nav_toggle-btn{
+    padding-left: 50px;
+  }
+}

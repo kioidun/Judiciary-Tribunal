@@ -1,0 +1,109 @@
+.navbaricons{
+    position: absolute;
+    
+    top: 73%;
+  right: 0;
+ position: fixed;
+   
+    margin-right: 24px;
+    z-index: 9999;
+}
+
+.navbaricons_ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.navbaricons_ul .navbaricons_li a{
+    font-size: 20px;
+    transition: 0.3s;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbaricons_ul .navbaricons_li{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    position: relative;
+    margin: 2px 0;
+    transition: 0.3s;
+}
+.navbaricons_ul .navbaricons_li:hover{
+    transform: translateX(-15px);
+}
+
+.navbaricons_ul .navbaricons_li:hover{
+    transform: rotate(360deg);
+}
+
+.navbaricons_ul .navbaricons_li:nth-child(1){
+    background-color: #0A66C2 ;
+}
+.navbaricons_ul .navbaricons_li:nth-child(2){
+    background-color:#316FF6 ;
+}
+.navbaricons_ul .navbaricons_li:nth-child(3){
+    background-color: black;
+}
+.navbaricons_ul .navbaricons_li:nth-child(4){
+    background-color:#FF00D2 ;
+}
+
+@media (max-width: 900px) {
+  .navbaricons {
+    top: 80%;
+    margin-right: 12px;
+  }
+  .navbaricons_ul .navbaricons_li a {
+    font-size: 18px;
+  }
+  .navbaricons_ul .navbaricons_li {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbaricons {
+    top: unset;
+    bottom: 10%;
+    right: 0;
+    margin-right: 8px;
+  }
+  .navbaricons_ul {
+    flex-direction: row;
+    gap: 6px;
+  }
+  .navbaricons_ul .navbaricons_li {
+    width: 32px;
+    height: 32px;
+  }
+  .navbaricons_ul .navbaricons_li a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbaricons {
+    bottom: 4%;
+    margin-right: 2px;
+  }
+  .navbaricons_ul .navbaricons_li {
+    width: 26px;
+    height: 26px;
+  }
+  .navbaricons_ul .navbaricons_li a {
+    font-size: 12px;
+  }
+}

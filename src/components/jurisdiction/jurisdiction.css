@@ -1,0 +1,221 @@
+/* ===== Jurisdiction Page (responsive, padded, non-stretched buttons) ===== */
+
+.jurisdiction_image {
+  width: 100%;
+  height: auto;
+}
+
+.jurisdiction_image img {
+  width: 100%;
+  height: 50vh;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* A centered container so content never hits the viewport edges */
+.jurisdiction_container {
+  max-width: 1100px;                 /* <- adjust to your site width */
+  margin: 0 auto;
+  padding: 0 16px;                   /* safe side padding */
+  box-sizing: border-box;
+}
+
+/* ===== Layout ===== */
+.jurisdiction_plans {
+  display: grid;
+  grid-template-columns: 35% 55%;
+  gap: 1.5rem;
+  margin-top: -1px;
+  align-items: start;
+}
+
+/* Left box */
+.jurisdiction_container-left_box {
+  background: #ceba39;
+  font-family: inherit;
+  text-align: center;
+  padding: 20px 16px;                /* add inner padding */
+  border-radius: 10px;
+  color: #000;                       /* better contrast on gold */
+  box-sizing: border-box;
+}
+
+.jurisdiction_container-left_box h2,
+.jurisdiction_container-left_box .tribename,
+.jurisdiction_container-left_box .tribenames,
+.jurisdiction_container-left_box .tribenamess {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 6px 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Right box */
+.jurisdiction_container-right_box {
+  font-size: 18px;
+  line-height: 1.65;
+  color: #111;
+  padding: 8px 12px;                 /* keep copy away from edges */
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* Make any paragraphs comfortable to read */
+.jurisdiction_container-right_box p,
+.jurisdiction_container-right_box li,
+.jurisdiction_container-right_box h3 {
+  margin: 0 0 12px 0;
+}
+
+/* QR code */
+.jurisdiction_container-right_box .qrcode {
+  width: 110px;
+  height: 110px;
+  margin: 16px 0;
+  object-fit: contain;
+}
+
+/* ===== Buttons (never full-width unless tiny screens) ===== */
+.jurisdiction_container-right_box .button-link,
+.jurisdiction_container-right_box .efiling {
+  display: inline-block;             /* inline-block so width can clamp cleanly */
+  text-align: center;
+  border: 2px solid transparent;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background-color: #ceba39;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  width: clamp(180px, 52%, 360px);   /* 👈 responsive width, never end-to-end */
+  box-sizing: border-box;
+}
+
+.jurisdiction_container-right_box .button-link {
+  margin: 24px 12px 8px 0;
+}
+
+.jurisdiction_container-right_box .efiling {
+  margin: 8px 12px 16px 0;
+}
+
+.jurisdiction_container-right_box .button-link:hover,
+.jurisdiction_container-right_box .efiling:hover {
+  background-color: #04aa6d;
+  border-color: #04aa6d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* ====== Breakpoints ====== */
+
+/* Large tablets / small laptops */
+@media (max-width: 1100px) {
+  .jurisdiction_container {
+    padding: 0 14px;
+  }
+  .jurisdiction_plans {
+    grid-template-columns: 1fr;      /* stack */
+    gap: 1.25rem;
+  }
+  .jurisdiction_container-left_box {
+    padding: 18px 14px;
+  }
+  .jurisdiction_container-left_box h2,
+  .jurisdiction_container-left_box .tribename,
+  .jurisdiction_container-left_box .tribenames,
+  .jurisdiction_container-left_box .tribenamess {
+    font-size: 28px;
+  }
+  .jurisdiction_container-right_box {
+    font-size: 17px;
+    padding: 8px 10px;
+  }
+}
+
+/* Tablets & large phones */
+@media (max-width: 768px) {
+  .jurisdiction_container {
+    padding: 0 12px;
+  }
+  .jurisdiction_image img {
+    height: 38vh;
+  }
+  .jurisdiction_container-left_box h2,
+  .jurisdiction_container-left_box .tribename,
+  .jurisdiction_container-left_box .tribenames,
+  .jurisdiction_container-left_box .tribenamess {
+    font-size: 24px;
+  }
+  .jurisdiction_container-right_box {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  /* Buttons: a bit narrower */
+  .jurisdiction_container-right_box .button-link,
+  .jurisdiction_container-right_box .efiling {
+    width: clamp(170px, 66%, 320px);
+    font-size: 17px;
+    padding: 12px 16px;
+  }
+  .jurisdiction_container-right_box .qrcode {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .jurisdiction_container {
+    padding: 0 10px;
+  }
+  .jurisdiction_image img {
+    height: 32vh;
+  }
+  .jurisdiction_container-left_box {
+    padding: 12px;
+    border-radius: 10px;
+  }
+  .jurisdiction_container-left_box h2,
+  .jurisdiction_container-left_box .tribename,
+  .jurisdiction_container-left_box .tribenames,
+  .jurisdiction_container-left_box .tribenamess {
+    font-size: 20px;
+  }
+  .jurisdiction_container-right_box {
+    font-size: 15px;
+    padding: 6px 8px;               /* tighter but still safe */
+  }
+  /* Buttons: never full-width; comfy size */
+  .jurisdiction_container-right_box .button-link,
+  .jurisdiction_container-right_box .efiling {
+    width: min(92%, 300px);         /* 👈 prevents edge-to-edge stretch */
+    font-size: 16px;
+    padding: 11px 14px;
+    margin-right: 0;                /* avoid pushing against the edge */
+  }
+  .jurisdiction_container-right_box .qrcode {
+    width: 76px;
+    height: 76px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .jurisdiction_container-right_box {
+    font-size: 14.5px;
+  }
+  .jurisdiction_container-right_box .button-link,
+  .jurisdiction_container-right_box .efiling {
+    width: min(95%, 260px);
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+}
