@@ -1,0 +1,90 @@
+.faq {
+  background: #43906D;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 20px;
+  transition: all 0.3s ease; /* Added smooth transition for hover */
+ 
+}
+
+.color_link a {
+  color: #ceba39;
+}
+
+.faq h4 {
+  color: white;
+  margin: 0;
+}
+
+
+
+
+.faq_icon {
+  background: transparent;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.faq p {
+  margin-top: 1.5rem;
+  white-space: pre-line;
+  color: white;
+}
+
+.minus-pointer {
+  cursor: pointer;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 900px) {
+  .faq {
+    padding: 1.2rem;
+    border-radius: 0.7rem;
+    margin: 14px;
+  }
+  .faq div {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .faq {
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    margin: 8px;
+  }
+  .faq h4 {
+    font-size: 1rem;
+  }
+  .faq div {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 15px;
+    gap: 0.5rem;
+  }
+  .faq_icon {
+    font-size: 1.2rem;
+  }
+  .faq p {
+    margin-top: 1rem;
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .faq {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin: 4px;
+  }
+  .faq h4 {
+    font-size: 0.95rem;
+  }
+  .faq div {
+    font-size: 14px;
+  }
+  .faq p {
+    font-size: 0.92rem;
+  }
+}

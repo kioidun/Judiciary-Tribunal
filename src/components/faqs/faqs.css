@@ -1,0 +1,207 @@
+.downloads{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+.downloads-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap:0px;
+   width: 60%;
+   margin-bottom: 20px;
+    background-color: #ececec;
+    border-radius: 10px;
+    padding: 20px;
+}
+.pdf-section{
+ margin: 0;
+ padding: 0;
+  
+}
+.pdf-section img{
+    width:50px;
+    height:50px;
+}
+.pdf-text h2{
+    color:black;
+    font-size: 15px;
+}
+.pdf-date h2{
+    color:black;
+    font-size: 15px;
+}
+.pdf-button{
+    
+    margin: 0;
+ padding: 0;
+}
+.pdf-text{
+  
+    margin: 0;
+ padding: 0;
+}
+.pdf-date{
+
+    margin: 0;
+ padding: 0;
+}
+
+.downloads-section button{
+    border: 2px solid ;
+    padding: 20px;
+    border-radius: 20px;
+    background-color:#ceba39 ;
+    color: #ffffff;
+    width:200px;
+   
+    font-size: 14px;
+    cursor: pointer;
+
+  }
+  .downloads-section button:hover{
+    border: 2px solid #04AA6D;
+    padding: 20px;
+    border-radius: 20px;
+    background-color:#04AA6D ;
+    color: #ffffff;
+    width:200px;
+   
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .faqs_container-sectionhead {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+.faqs_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-start; /* instead of space-between */
+  align-items: flex-start;
+}
+
+.faq {
+  flex: 1 1 400px;
+  max-width: 400px;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: #43906D;
+}
+
+
+/* Header flex row for question + button */
+.faq_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq_icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .faq {
+    max-width: 100%;
+  }
+}
+
+
+/* On small screens, make them full width */
+@media (max-width: 768px) {
+  .faq {
+    max-width: 100%;
+  }
+}
+
+
+  @media(max-width:1200px){
+    .downloads-section {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 95%;
+    padding: 16px;
+  }
+  }
+  @media(max-width:900px){
+    .downloads-section {
+    grid-template-columns: 1fr 1fr;
+    width: 98%;
+    padding: 12px;
+    gap: 8px;
+  }
+  .downloads-section button {
+    width: 120px;
+    font-size: 13px;
+    padding: 12px;
+  }
+  .pdf-section img {
+    width: 40px;
+    height: 40px;
+  }
+  }
+  @media(max-width:770px){
+    .downloads-section {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 8px;
+    gap: 6px;
+  }
+  .downloads-section button {
+    width: 100px;
+    font-size: 12px;
+    padding: 10px;
+  }
+  .pdf-section img {
+    width: 32px;
+    height: 32px;
+  }
+  }
+  @media(max-width:480px){
+    .downloads{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+    }
+    .downloads-section{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100vw;
+        padding: 4px;
+        gap: 4px;
+    }
+    .downloads-section button{
+        width: 90vw;
+        font-size: 11px;
+        padding: 8px;
+    }
+    .pdf-section img {
+    width: 24px;
+    height: 24px;
+  }
+  .pdf-text h2,
+  .pdf-date h2 {
+    font-size: 12px;
+  }
+  }
+  @media(max-width:350px) {
+  .downloads-section button {
+    width: 98vw;
+    font-size: 9px;
+    padding: 4px;
+  }
+  .pdf-section img {
+    width: 16px;
+    height: 16px;
+  }
+}

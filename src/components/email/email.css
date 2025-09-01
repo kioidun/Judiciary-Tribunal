@@ -1,0 +1,107 @@
+/* 🔹 Form Wrapper */
+.formone {
+  text-align: center;
+  width: 100%;              /* Always take available space */
+  max-width: 500px;         /* Cap size on large screens */
+  margin: 20px auto;
+  padding: 0 1rem;          /* Prevent content hitting screen edges */
+  box-sizing: border-box;   /* Include padding in width */
+}
+
+/* 🔹 Form Container */
+.formi {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formone h2 {
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+}
+
+/* 🔹 Inputs & Textareas */
+.formii input,
+.formii textarea {
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;               /* Fill container */
+  border: 2px solid #ceba39;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.formii textarea {
+  height: 120px;             /* Default height */
+  resize: vertical;          /* Let user expand */
+}
+
+/* 🔹 Submit Button */
+.btn-form {
+  border: 2px solid #ceba39;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-form:hover {
+  background: #ceba39;
+  color: white;
+}
+
+/* 🔹 Responsive Tweaks */
+@media (max-width: 1024px) {
+  .formone {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 770px) {
+  .formone {
+    width: 95%;
+    margin-top: 40px;
+  }
+  .btn-form {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .formone {
+    width: 100%;          /* ✅ Prevent overflow */
+    padding: 0 0.8rem;
+    margin: 0 auto;
+  }
+
+  .formi {
+    padding: 12px;
+  }
+
+  .formone h2 {
+    font-size: 1.2rem;
+  }
+
+  .formii input,
+  .formii textarea {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .btn-form {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
