@@ -116,7 +116,7 @@ export const menuItems = [
             path:"PoliticalPartiesDisputesTribunal"
           },
           {
-            title: "Sports Dispute Tribunals",
+            title: "Sports Disputes Tribunals",
             path:"SportsDisputeTribunals"
           },
           {

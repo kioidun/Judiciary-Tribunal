@@ -37,7 +37,7 @@ footer {
 
 .footer_container p {
   margin-top: 0.5rem;
-  color: white;
+  color: black;
   line-height: 1.6;
 }
 
@@ -57,7 +57,7 @@ footer {
 }
 
 .footer_socials a {
-  background-color: white;
+  background-color: black;
   padding: 0.7rem;
   border: 1px solid transparent;
   border-radius: 0.6rem;
@@ -65,7 +65,7 @@ footer {
 }
 
 .footer_socials a svg {
-  color: var(--test);
+  color: #b5a536;
   font-size: 1.2rem;
 }
 

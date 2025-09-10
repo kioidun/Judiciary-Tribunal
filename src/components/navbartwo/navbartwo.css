@@ -1,7 +1,7 @@
 /* Navbar Wrapper */
 .nav {
   height: auto;
-  background-color: #928830;
+ 
   position: sticky;
   top: 0;
   z-index: 9999;
@@ -10,7 +10,7 @@
 /* Navbar Inner Container */
 .navbar {
   height: 10vh;
-  background-color: #928830;
+  background-color: #b0a235;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@
 
 .nav-item a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-family: "Roboto", sans-serif;  /* Explicit font family */
   font-size: 20px; /* Explicit font size */
   padding: 6px 16px;
@@ -51,7 +51,7 @@
 }
 
 .nav-item a:hover {
-  color: black;
+  color: white;
 }
 
 .nav-causlist {
@@ -60,7 +60,7 @@
   background-color: white;
   color: black;
   border: 2px solid white;
-  border-radius: 25px;
+  border-radius: 5px;
   padding: 6px 16px;
   cursor: pointer;
 }

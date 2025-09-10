@@ -3,11 +3,6 @@ import { Link } from "react-router-dom";
 import { menuItemstwo } from "./menuItems";
 import "./dropdowns.css";
 
-/**
- * About Us submenu
- * - Parent (About Us) controls open/close.
- * - Here we only render the list and make sure each click closes the drawer.
- */
 function Dropdowntwo({ closeMenu, isDesktop }) {
   return (
     <ul
